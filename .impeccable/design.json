@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-08T14:49:52Z",
+  "title": "Design System: Criolaser",
+  "extensions": {
+    "colorMeta": {
+      "blue": {
+        "role": "primary",
+        "displayName": "Azul institucional"
+      },
+      "deep": {
+        "role": "primary",
+        "displayName": "Azul profundo"
+      },
+      "yellow": {
+        "role": "secondary",
+        "displayName": "Amarelo cítrico"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Branco frio"
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Superfície clara"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta azul"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Texto secundário"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Divisor"
+      },
+      "paper-dark": {
+        "role": "neutral",
+        "displayName": "Fundo escuro"
+      },
+      "surface-dark": {
+        "role": "neutral",
+        "displayName": "Superfície escura"
+      },
+      "ink-dark": {
+        "role": "neutral",
+        "displayName": "Texto claro"
+      },
+      "muted-dark": {
+        "role": "neutral",
+        "displayName": "Texto secundário escuro"
+      },
+      "line-dark": {
+        "role": "neutral",
+        "displayName": "Divisor escuro"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Título inicial."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Títulos de seção."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Serviços e publicações."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Leitura geral."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Navegação."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Ações principais."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Resposta de botões, imagens e entrada."
+      },
+      {
+        "name": "button-transition",
+        "value": "background .2s,transform .2s var(--ease)",
+        "purpose": "Hover e active da ação."
+      },
+      {
+        "name": "post-transition",
+        "value": "transform .6s var(--ease)",
+        "purpose": "Imagem amplia 1.035 no hover."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation:none!important;transition:none!important",
+        "purpose": "Preferência reduzida também remove rolagem suave."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tablet",
+        "value": "1050px"
+      },
+      {
+        "name": "mobile",
+        "value": "760px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Ação principal",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Link amarelo de avaliação com seta diagonal.",
+      "html": "<a class=\"ds-button\" href=\"#contato\">Solicitar avaliação<svg width=\"21\" height=\"21\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></a>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:space-between;gap:32px;min-height:56px;padding:16px 24px;border-radius:50px;background:var(--yellow,#f4d24c);color:var(--deep,#15334e);font-family:Figtree,sans-serif;font-weight:600;line-height:1.2;text-decoration:none;transition:background .2s,transform .2s var(--ease,cubic-bezier(.16,1,.3,1))}.ds-button:hover{background:#ffe77d;transform:translateY(-2px)}.ds-button:active{transform:translateY(0)}.ds-button:focus-visible,.ds-link:focus-visible,.ds-choice:focus-visible,.ds-nav a:focus-visible,.ds-service:focus-visible{outline:3px solid #da9c08;outline-offset:5px}"
+    },
+    {
+      "name": "Link editorial",
+      "kind": "button",
+      "description": "Link sublinhado com seta discreta.",
+      "html": "<a class=\"ds-link\" href=\"#clinica\">Conhecer a clínica<svg width=\"21\" height=\"21\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></a>",
+      "css": ".ds-link{display:inline-flex;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid currentColor;color:var(--ink,#19364e);font:500 16px Figtree,sans-serif;text-decoration:none}.ds-link svg{transition:transform .2s}.ds-link:hover svg{transform:translate(2px,-2px)}.ds-button:focus-visible,.ds-link:focus-visible,.ds-choice:focus-visible,.ds-nav a:focus-visible,.ds-service:focus-visible{outline:3px solid #da9c08;outline-offset:5px}"
+    },
+    {
+      "name": "Navegação",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Links do cabeçalho institucional.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navegação\"><a href=\"#cuidados\">Cuidados</a><a href=\"#clinica\">A clínica</a><a href=\"#contato\">Contato</a></nav>",
+      "css": ".ds-nav{display:flex;gap:32px;background:var(--blue,#214261);color:#fff;font:14px Figtree,sans-serif;padding:0 24px;min-height:88px;align-items:center}.ds-nav a{padding:14px 0;color:inherit;text-decoration:none}.ds-button:focus-visible,.ds-link:focus-visible,.ds-choice:focus-visible,.ds-nav a:focus-visible,.ds-service:focus-visible{outline:3px solid #da9c08;outline-offset:5px}"
+    },
+    {
+      "name": "Assunto de contato",
+      "kind": "button",
+      "refersTo": "interest-choice",
+      "description": "Opção de interesse; estado selecionado documentado por aria-pressed.",
+      "html": "<div class=\"ds-choice-stage\"><button class=\"ds-choice\" aria-pressed=\"false\">Cuidados faciais<svg width=\"21\" height=\"21\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></button><button class=\"ds-choice\" aria-pressed=\"true\">Cuidados corporais<svg width=\"21\" height=\"21\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></button></div>",
+      "css": ".ds-choice-stage{display:grid;grid-template-columns:1fr 1fr;gap:12px;background:var(--deep,#15334e);padding:20px}.ds-choice{background:none;color:#fff;border:1px solid #8197a8;border-radius:15px;min-height:76px;padding:15px;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:12px;font:14px Figtree,sans-serif;transition:background .2s,color .2s}.ds-choice:hover{background:#ffffff15}.ds-choice[aria-pressed=true]{background:#d9e9f4;color:var(--deep,#15334e);border-color:#d9e9f4}.ds-button:focus-visible,.ds-link:focus-visible,.ds-choice:focus-visible,.ds-nav a:focus-visible,.ds-service:focus-visible{outline:3px solid #da9c08;outline-offset:5px}"
+    },
+    {
+      "name": "Serviço expansível",
+      "kind": "custom",
+      "description": "Linha de serviço com categoria, título e controle mais.",
+      "html": "<button class=\"ds-service\" aria-expanded=\"false\"><span><small>Estética facial</small>Ultrassom microfocado</span><svg width=\"23\" height=\"23\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M12 5v14M5 12h14\"/></svg></button>",
+      "css": ".ds-service{width:100%;text-align:left;background:none;color:var(--ink,#19364e);border:0;border-top:1px solid var(--line,#cbd5dc);padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:20px;font:500 23px Figtree,sans-serif;letter-spacing:-.02em}.ds-service small{display:block;color:var(--muted,#526777);font-size:12px;letter-spacing:0;margin-bottom:5px}.ds-button:focus-visible,.ds-link:focus-visible,.ds-choice:focus-visible,.ds-nav a:focus-visible,.ds-service:focus-visible{outline:3px solid #da9c08;outline-offset:5px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Verão azul, cuidado próximo",
+    "overview": "A identidade combina o azul da marca oficial, o amarelo cítrico da temporada e superfícies claras frias. Tipografia contemporânea, imagens generosas e curvas assimétricas dão presença editorial sem transformar cuidado estético em promessa de resultado. A direção vigente foi delegada pelo usuário em 08/10/2026 e está registrada em PRODUCT.md e docs/direction.md.\n\nO lettering do logotipo é oficial, recortado mecanicamente do original e nunca refeito com uma fonte aproximada. A composição de água, luz e limões é uma imagem editorial ilustrativa identificada; não representa a clínica real. Registros de atendimento, entrada e publicações vêm dos materiais oficiais preservados. Este sistema descreve a demo local revisada, sem constituir autorização de publicação ou uso comercial.",
+    "keyCharacteristics": [
+      "Azul institucional contínuo e amarelo em pontos de ação.",
+      "Figtree autohospedada, títulos amplos e leitura acolhedora.",
+      "Imagens editoriais e registros reais com proveniência explícita.",
+      "Curvas sóbrias, superfícies planas e movimento breve.",
+      "Tema claro inicial; escuro escolhido explicitamente e salvo no navegador."
+    ],
+    "rules": [
+      {
+        "name": "The Tema explícito Rule",
+        "body": "O escuro é uma preferência acionada pelo controle visível; o estado inicial é claro quando não há escolha salva.",
+        "section": "colors"
+      },
+      {
+        "name": "The Marca preservada Rule",
+        "body": "Não aplicar uma serifa aos títulos para imitar o lettering: usar o arquivo oficial da marca.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do manter Figtree na interface e lettering oficial na marca.",
+      "Do identificar a imagem editorial como ilustrativa e preservar a origem dos registros reais.",
+      "Do manter foco visível, semântica de seleção e alternativa com movimento reduzido.",
+      "Do usar superfícies tonais e curvas existentes para criar profundidade."
+    ],
+    "donts": [
+      "Don't apresentar imagem ilustrativa como fotografia da clínica.",
+      "Don't inventar depoimentos, resultados, credenciais ou condições comerciais.",
+      "Don't ativar tema escuro sem escolha ou preferência salva.",
+      "Don't acrescentar sombras ou cartões genéricos ao sistema plano observado."
+    ]
+  }
+}
