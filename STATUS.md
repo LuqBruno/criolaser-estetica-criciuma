@@ -13,7 +13,9 @@ Implementados: hero editorial, serviços expansíveis, apresentação da clínic
 - Ajuste de contexto: removido “Summer 2026” da interface; hero, seletor e metadados usam “temporada de verão”, sem ano. Referência ao lançamento histórico permanece apenas na documentação das fontes.
 - Criado repositório próprio `LuqBruno/criolaser-estetica-criciuma`, branch `main`, e fluxo GitHub Pages em `.github/workflows/deploy-pages.yml`. Build usa o subcaminho correto; originais privados e capturas locais ficam fora do repositório.
 - TypeScript e build de produção para `/criolaser-estetica-criciuma/` passaram antes da publicação: Vite 6.4.4, JS 258.45 kB / 78.84 kB gzip, CSS 12.34 kB / 3.56 kB gzip.
-- Prévia: https://luqbruno.github.io/criolaser-estetica-criciuma/ . O estado final do workflow e a resposta HTTP devem ser conferidos após o push.
+- Repositório público: https://github.com/LuqBruno/criolaser-estetica-criciuma . Commit de publicação `b600d9205d10f229830396679c9cb9599c6428ef` na `main`; working tree limpa após o push inicial.
+- Site Pages configurado para GitHub Actions. A primeira compilação concluiu com sucesso; após habilitar Pages no repositório autenticado, a implantação foi concluída em 08/10/2026 (workflow `37797090337`, build e deploy verdes).
+- Prévia: https://luqbruno.github.io/criolaser-estetica-criciuma/ respondeu HTTP 200. Página aberta no navegador; JavaScript, CSS, hero WebP e logo também responderam HTTP 200. Texto “Summer 2026” não aparece mais na página renderizada; seletor, título e rodapé usam linguagem atemporal.
 
 - TypeScript e build de produção aprovados. Vite6.4.4; lockfile local. npm audit após atualizar sharp: zero vulnerabilidades.
 - Navegador real: 360,390,430,768,1024,1440px sem rolagem horizontal. Desktop e mobile examinados, recortes sem distorção, imagens carregadas. Capturas em .impeccable/review. Segunda passagem refez captura desktop desde topo para eliminar artefato do header sticky em captura longa.
